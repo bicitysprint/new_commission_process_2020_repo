@@ -890,22 +890,26 @@ view: xxx_ut_job_history_w_commission {
 
   measure: count {
     type: count
-    drill_fields: [opp_user_name, courier_name, client_name, department_name, account_name]
+    drill_fields: [drilldown*]
   }
 
 
   measure: sum_gross_rev {
     type: sum
     sql: ${gross_revenue} ;;
-
+    drill_fields: [drilldown*]
   }
 
   measure: sum_commission_amount_based_on_margin  {
     type: sum
     sql: ${commission_amount_based_on_margin} ;;
+    drill_fields: [drilldown*]
   }
 
 
+set: drilldown {
+  fields: [job_no, booking_datetime_raw, vehicle_booked_desc, vehicle_used_desc, opp_id, opp_user_name, opportunity_type, commission_amount_based_on_margin]
+}
 
 
 }
