@@ -892,4 +892,20 @@ view: xxx_ut_job_history_w_commission {
     type: count
     drill_fields: [opp_user_name, courier_name, client_name, department_name, account_name]
   }
+
+
+  measure: sum_gross_rev {
+    type: sum
+    sql: ${gross_revenue} ;;
+
+  }
+
+  measure: sum_commission_amount_based_on_margin  {
+    type: sum
+    sql: ${commission_amount_based_on_margin} ;;
+  }
+
+
+
+
 }
