@@ -898,12 +898,14 @@ view: xxx_ut_job_history_w_commission {
     type: sum
     sql: ${gross_revenue} ;;
     drill_fields: [drilldown*]
+    value_format_name: gbp
   }
 
   measure: sum_commission_amount_based_on_margin  {
     type: sum
     sql: ${commission_amount_based_on_margin} ;;
     drill_fields: [drilldown*]
+    value_format_name: gbp
   }
 
 
