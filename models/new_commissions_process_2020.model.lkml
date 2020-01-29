@@ -1,8 +1,10 @@
 connection: "db"
-
+#include: "/views/xxx_ut_job_history_w_commission.view"
+include: "/views/**/*.view"
 
 named_value_format: gb {
   value_format: "gbp"
+  #value_format: "\"£\"#,##0"
 }
 
 datagroup: new_commissions_process_2020_default_datagroup {
@@ -11,3 +13,9 @@ datagroup: new_commissions_process_2020_default_datagroup {
 }
 
 persist_with: new_commissions_process_2020_default_datagroup
+
+
+explore: xxx_ut_job_history_w_commission {
+  group_label: "Commissions_2020"
+
+}
