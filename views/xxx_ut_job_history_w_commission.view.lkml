@@ -901,6 +901,7 @@ view: xxx_ut_job_history_w_commission {
   measure: avg_commission_per_week {
     type: number
     sql: ${sum_commission_amount_based_on_margin}/${week_count} ;;
+    drill_fields: [drilldown*]
     value_format_name: gbp
   }
 
