@@ -893,6 +893,16 @@ view: xxx_ut_job_history_w_commission {
     drill_fields: [drilldown*]
   }
 
+  measure: week_count {
+    type: count_distinct
+    sql: ${booking_weekiso} ;;
+  }
+
+  measure: avg_commission_per_week {
+    type: number
+    sql: ${sum_commission_amount_based_on_margin}/${week_count} ;;
+    value_format_name: gbp
+  }
 
   measure: sum_gross_rev {
     type: sum
@@ -911,6 +921,8 @@ view: xxx_ut_job_history_w_commission {
   measure: avg_commission {
     type: average
     sql: ${commission_amount_based_on_margin} ;;
+    drill_fields: [drilldown*]
+    value_format_name: gbp
   }
 
 set: drilldown {
