@@ -99,6 +99,17 @@ view: xxx_ut_job_history_w_commission {
     sql: ${TABLE}."BOOKING_WEEKISO" ;;
   }
 
+  dimension: account_start_weekiso {
+    type: number
+    sql: ${TABLE}."ACCOUNT_START_WEEKISO" ;;
+  }
+
+  dimension: account_year {
+    type: number
+    sql: year(${account_start_datetime_raw}) ;;
+    drill_fields: [drilldown*]
+  }
+
   dimension: booking_year {
     type: number
     sql: ${TABLE}."BOOKING_YEAR" ;;
@@ -490,7 +501,7 @@ view: xxx_ut_job_history_w_commission {
   }
 
   dimension: job_no {
-    type: number
+    type: string
     sql: ${TABLE}."JOB_NO" ;;
   }
 
@@ -925,6 +936,18 @@ view: xxx_ut_job_history_w_commission {
     sql: ${commission_amount_based_on_margin} ;;
     drill_fields: [drilldown*]
     value_format_name: gbp
+  }
+
+  measure: distinct_opps {
+    type: count_distinct
+    sql: ${opp_id} ;;
+    drill_fields: [drilldown*]
+  }
+
+  measure: distinct_accounts {
+    type: count_distinct
+    sql: ${account_code} ;;
+    drill_fields: [drilldown*]
   }
 
 set: drilldown {
