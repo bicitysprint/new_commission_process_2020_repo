@@ -908,6 +908,10 @@ view: xxx_ut_job_history_w_commission {
     value_format_name: gbp
   }
 
+  measure: avg_commission {
+    type: average
+    sql: ${commission_amount_based_on_margin} ;;
+  }
 
 set: drilldown {
   fields: [job_no, booking_datetime_raw, vehicle_booked_desc, vehicle_used_desc, opp_id, opp_user_name, opportunity_type, commission_amount_based_on_margin]
