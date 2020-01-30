@@ -896,6 +896,7 @@ view: xxx_ut_job_history_w_commission {
   measure: week_count {
     type: count_distinct
     sql: ${booking_weekiso} ;;
+    drill_fields: [drilldown*]
   }
 
   measure: avg_commission_per_week {
