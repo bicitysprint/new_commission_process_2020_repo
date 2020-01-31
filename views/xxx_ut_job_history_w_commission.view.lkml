@@ -950,7 +950,12 @@ view: xxx_ut_job_history_w_commission {
     drill_fields: [drilldown*]
   }
 
-
+  measure: sum_margin {
+    type: sum
+    sql: ${margin} ;;
+    drill_fields: [drilldown*]
+    value_format_name: gbp
+  }
 
 set: drilldown {
   fields: [job_no, booking_datetime_date, vehicle_booked_desc, vehicle_used_desc, opp_id, opp_user_name, opportunity_type, margin, comm_split_perc,commission_amount_based_on_margin, commission_start_date, commission_end_date, is_opportunity, is_commission, trade_before_closed_date, is_split, split_lv, revenue_service_centre, account_service_centre, account_start_datetime_date]
