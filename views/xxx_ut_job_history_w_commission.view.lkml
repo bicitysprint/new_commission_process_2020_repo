@@ -950,10 +950,6 @@ view: xxx_ut_job_history_w_commission {
     drill_fields: [drilldown*]
   }
 
-  measure: sum_revenue {
-    type: sum
-    sql: ${gross_revenue} ;;
-  }
 
 
 set: drilldown {
