@@ -730,4 +730,9 @@ view: hl_opp_kpi {
     sql: count(distinct "CS_Account_Number__c") ;;
   }
 
+  measure: avg_time_to_close_opp {
+    type: average
+    sql: ${days_to_close_opp} ;;
+  }
+
 }
