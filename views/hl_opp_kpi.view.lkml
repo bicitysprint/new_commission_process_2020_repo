@@ -720,4 +720,14 @@ view: hl_opp_kpi {
 
   }
 
+  measure: traders  {
+    type: number
+    sql: count(distinct (case when CURRENT_YEAR_JOB_BOOKING_VOL >0 then "CS_Account_Number__c" end)) ;;
+  }
+
+  measure: total_accounts {
+    type: number
+    sql: count(distinct "CS_Account_Number__c") ;;
+  }
+
 }
