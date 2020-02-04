@@ -713,4 +713,11 @@ view: hl_opp_kpi {
     type: count
     drill_fields: [id, name, forecast_category_name, stage_name, full_name]
   }
+
+  measure: non_traders  {
+    type: number
+    sql: count(distinct (case when CURRENT_YEAR_JOB_BOOKING_VOL is null then "CS_Account_Number__c" end)) ;;
+
+  }
+
 }
