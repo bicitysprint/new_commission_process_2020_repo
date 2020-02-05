@@ -65,6 +65,21 @@ view: xxx_ut_job_history_w_commission {
     sql: ${TABLE}."ARCHIVE" ;;
   }
 
+  dimension_group: archive_date {
+    type: time
+    timeframes: [
+     raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}."ARCHIVE_DATE" ;;
+
+  }
+
   dimension_group: booking_datetime {
     type: time
     timeframes: [
