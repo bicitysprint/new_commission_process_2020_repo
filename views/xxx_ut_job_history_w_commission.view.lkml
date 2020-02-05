@@ -709,6 +709,7 @@ view: xxx_ut_job_history_w_commission {
   dimension: revenue_split_perc {
     type: number
     sql: ${TABLE}."REVENUE_SPLIT_PERC" ;;
+    value_format: "0/%"
   }
 
   dimension: saturday_delivery_amount {
