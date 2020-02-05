@@ -236,6 +236,7 @@ view: xxx_ut_job_history_w_commission {
       date,
       week,
       month,
+      month_name,
       quarter,
       year
     ]
