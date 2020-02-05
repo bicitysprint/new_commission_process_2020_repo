@@ -61,7 +61,7 @@ view: xxx_ut_job_history_w_commission {
   }
 
   dimension: archive {
-    type: number
+    type: string
     sql: ${TABLE}."ARCHIVE" ;;
   }
 
