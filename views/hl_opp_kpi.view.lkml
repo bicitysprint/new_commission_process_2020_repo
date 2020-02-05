@@ -709,6 +709,23 @@ view: hl_opp_kpi {
     sql: ${TABLE}."UMBRELLA_SERVICE" ;;
   }
 
+
+  dimension: opp_week  {
+    type: string
+    sql: ${TABLE}."OPP_WEEK"  ;;
+  }
+
+  dimension: opp_month  {
+    type: string
+    sql: ${TABLE}."OPP_MONTH"  ;;
+  }
+
+  dimension: opp_year  {
+    type: string
+    sql: ${TABLE}."OPP_YEAR"  ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: [id, name, forecast_category_name, stage_name, full_name]
