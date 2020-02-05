@@ -190,6 +190,7 @@ view: xxx_ut_job_history_w_commission {
   dimension: comm_split_perc {
     type: number
     sql: ${TABLE}."COMM_SPLIT_PERC" ;;
+    value_format: "0\%"
   }
 
   dimension: commission_amount_based_on_margin {
