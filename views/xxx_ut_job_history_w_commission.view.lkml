@@ -320,7 +320,13 @@ view: xxx_ut_job_history_w_commission {
 
   dimension: department {
     type: string
-    sql: ${TABLE}."DEPARTMENT" ;;
+    sql:  case
+    when ${TABLE}."DEPARTMENT" = 'Business Development London' then 'London'
+    when ${TABLE}."DEPARTMENT" = 'Business Development North' then 'North'
+    when ${TABLE}."DEPARTMENT" = 'Business Development South' then 'South'
+    when ${TABLE}."DEPARTMENT" = 'Business Development' then 'Support'
+    else ${TABLE}."DEPARTMENT"
+    END ;;
   }
 
   dimension: department_name {
@@ -761,7 +767,11 @@ view: xxx_ut_job_history_w_commission {
 
   dimension: title {
     type: string
-    sql: ${TABLE}."TITLE" ;;
+    sql: case
+          when ${TABLE}."TITLE" = 'Territory Manager' then 'Business Development TM'
+          when ${TABLE}."TITLE" = 'Business Development AD' then 'Business Development Account Director'
+          else ${TABLE}."TITLE"
+          END ;;
   }
 
   dimension: to_address_1 {
