@@ -827,4 +827,17 @@ view: hl_opp_kpi_v2 {
     type: count
     drill_fields: [id, forecast_category_name, full_name, stage_name, name]
   }
+
+
+  measure: avg_time_to_close_opp {
+    type: average
+    sql: ${days_to_close_opp} ;;
+  }
+
+
+  measure: avg_time_to_convert {
+    type: average
+    sql:  ${days_to_convert} ;;
+  }
+
 }
