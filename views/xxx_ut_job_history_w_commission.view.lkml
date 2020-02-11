@@ -619,7 +619,7 @@ view: xxx_ut_job_history_w_commission {
     type: string
     link: {
       label: "See Commission Detail for {{value}}"
-      url: "/dashboards/360?Opp%20User%Name={{value}}"
+      url: "/dashboards/360?Opp%20User%20Name={{value}}"
       icon_url: "https://looker.com/favicon.ico"
     }
     sql: ${TABLE}."OPP_USER_NAME" ;;
