@@ -605,6 +605,11 @@ view: xxx_ut_job_history_w_commission {
     sql: ${TABLE}."OPP_ID" ;;
   }
 
+  dimension: opp_user_email {
+    type: string
+    sql: ${TABLE}."OPP_USER_EMAIL" ;;
+  }
+
   dimension: opp_user_id {
     type: string
     sql: ${TABLE}."OPP_USER_ID" ;;
