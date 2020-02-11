@@ -9,62 +9,62 @@ view: hl_opp_kpi_v2 {
     sql: ${TABLE}."Id" ;;
   }
 
-  dimension: Jan-2020 {
+  dimension: Jan_2020 {
     type: number
     sql: ${TABLE}."2020-01-01" ;;
   }
 
-  dimension: Feb-2020 {
+  dimension: Feb_2020 {
     type: number
     sql: ${TABLE}."2020-02-01" ;;
   }
 
-  dimension: Mar-2020 {
+  dimension: Mar_2020 {
     type: number
     sql: ${TABLE}."2020-03-01" ;;
   }
 
-  dimension: Apr-2020 {
+  dimension: Apr_2020 {
     type: number
     sql: ${TABLE}."2020-04-01" ;;
   }
 
-  dimension: May-2020 {
+  dimension: May_2020 {
     type: number
     sql: ${TABLE}."2020-05-01" ;;
   }
 
-  dimension: Jun-2020 {
+  dimension: Jun_2020 {
     type: number
     sql: ${TABLE}."2020-06-01" ;;
   }
 
-  dimension: Jul-2020 {
+  dimension: Jul_2020 {
     type: number
     sql: ${TABLE}."2020-07-01" ;;
   }
 
-  dimension: Aug-2020 {
+  dimension: Aug_2020 {
     type: number
     sql: ${TABLE}."2020-08-01" ;;
   }
 
-  dimension: Sep-2020 {
+  dimension: Sep_2020 {
     type: number
     sql: ${TABLE}."2020-09-01" ;;
   }
 
-  dimension: Oct-2020 {
+  dimension: Oct_2020 {
     type: number
     sql: ${TABLE}."2020-10-01" ;;
   }
 
-  dimension: Nov-2020 {
+  dimension: Nov_2020 {
     type: number
     sql: ${TABLE}."2020-11-01" ;;
   }
 
-  dimension: Dec-2020 {
+  dimension: Dec_2020 {
     type: number
     sql: ${TABLE}."2020-12-01" ;;
   }
