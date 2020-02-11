@@ -617,7 +617,7 @@ view: xxx_ut_job_history_w_commission {
 
   dimension: opp_user_name {
     type: string
-    drill_fields: [account_name, department, archive_date_month, sum_commission_amount_based_on_margin]
+    drill_fields: [account_name, sum_commission_amount_based_on_margin]
     link: {
       label: "See Commission Detail for {{value}}"
       url: "/dashboards/360?Opp%20User%20Name={{value}}"
