@@ -840,4 +840,9 @@ view: hl_opp_kpi_v2 {
     sql:  ${days_to_convert} ;;
   }
 
+  measure: count_of_converted_opps {
+    type: count_distinct
+    sql: ${converted_opp_id} ;;
+  }
+
 }
