@@ -626,6 +626,13 @@ view: xxx_ut_job_history_w_commission {
     sql: ${TABLE}."OPP_USER_NAME" ;;
   }
 
+  dimension: opp_user_name_2 {
+    label: "User Name"
+    type: string
+    drill_fields: [account_name, sum_commission_amount_based_on_margin]
+    sql: ${TABLE}."OPP_USER_NAME" ;;
+  }
+
   dimension: opportunity_type {
     type: string
     sql: ${TABLE}."OPPORTUNITY_TYPE" ;;
