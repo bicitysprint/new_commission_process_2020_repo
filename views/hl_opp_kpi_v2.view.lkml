@@ -1,7 +1,6 @@
 view: hl_opp_kpi_v2 {
-  sql_table_name: "CC"."HL_OPP_KPI_V2"
-    ;;
-  drill_fields: [id]
+  sql_table_name: "CC"."HL_OPP_KPI_V2";;
+
 
   dimension: id {
     primary_key: yes
