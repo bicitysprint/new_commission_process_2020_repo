@@ -18,7 +18,7 @@ persist_with: new_commissions_process_2020_default_datagroup
 explore: job_level_w_commissions {
   view_name: xxx_ut_job_history_w_commission
   # view_label: "Job History with Commission"
-  group_label: "Citysprint"
+  group_label: "CitySprint"
   description: "job level detail commissions"
 
 }

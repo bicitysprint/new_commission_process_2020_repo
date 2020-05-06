@@ -18,7 +18,7 @@ persist_with: hl_opp_kpi_default_datagroup
 explore: high_level_opp_kpi {
   view_name: hl_opp_kpi_v2
   # view_label: "Job History with Commission"
-  group_label: "Citysprint"
+  group_label: "CitySprint"
   description: "high level opp kpi"
 
 }
